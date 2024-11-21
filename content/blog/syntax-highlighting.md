@@ -1,6 +1,6 @@
 ---
 external: false
-title: "Prism.js syntax highlighting for code blocks"
+title: "Prism.js 코드블록 사용법"
 description: "Code blocks are syntax highlighted using Prism.js"
 date: 2022-10-30
 ---
