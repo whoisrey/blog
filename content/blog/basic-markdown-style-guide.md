@@ -1,5 +1,6 @@
 ---
 external: false
+draft: true
 title: "기본 스타일 가이드"
 description: "You can author content using the familiar markdown syntax you already know. All basic markdown syntax is supported."
 date: 2022-11-02

@@ -1,5 +1,6 @@
 ---
 external: false
+draft: true
 title: "마크다운 가이드"
 description: "In addition to supporting all basic Markdoc syntax, this template also supports extended markdown syntax to render custom components."
 date: 2022-11-01
