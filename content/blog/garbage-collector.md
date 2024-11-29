@@ -37,9 +37,9 @@ V8 엔진은 이 가설에 따라 새로운 객체는 먼저 **New Space**에 �
 
 ![memory](/images/garbage-collector/memory.png)
 
----
+그렇다면 New Space와 Old Space는 각각 어떻게 메모리를 관리할까요?
 
-다음은 New Space와 Old Space가 메모리를 관리하는 방식에 대한 설명입니다.
+---
 
 - New Space
 
@@ -77,7 +77,7 @@ V8 엔진은 이 가설에 따라 새로운 객체는 먼저 **New Space**에 �
 
 ## 메모리 관리 최적화
 
-가비지 컬렉션은 프로그램이 일시적으로 멈추는 SWT(stop-the-world) 상태를 유발합니다. 이는 사용자의 경험을 저해할 수 있기 때문에, V8 엔진은 이를 최소화하기 위해 세 가지 최적화 기술을 아래와 같이 도입했습니다.
+메모리 관리 작업을 수행하는 가비지 컬렉션은 프로그램이 일시적으로 멈추는 SWT(stop-the-world) 상태를 유발하기도 합니다. 이는 사용자의 경험을 저해할 수 있기 때문에, V8 엔진은 이를 최소화하기 위해 가비지 컬렉션 작업을 효율적으로 수행하는 방법을 개발하였습니다.
 
 - Parallel
 
@@ -94,7 +94,7 @@ V8 엔진은 이 가설에 따라 새로운 객체는 먼저 **New Space**에 �
 
   ![orinoco](/images/garbage-collector/orinoco.png)
 
-Thread를 유연하게 활용하는 이 기술들은 카비지 컬렉션 프로젝트의 코드명인 Orinoco에 해당합니다. V8 엔진은 이러한 Orinoco 프로젝트를 통해 가비지 컬렉션 작업을 현재까지 발전시켜왔습니다.
+Thread를 유연하게 활용하는 이 기술들은 가비지 컬렉션 프로젝트의 코드명인 **Orinoco**에 해당합니다. V8 엔진은 이러한 Orinoco 프로젝트를 통해 사용자 경험을 향상시키면서 메모리를 효율적으로 관리할 수 있도록 발전해왔습니다.
 
 ---
 
@@ -102,7 +102,7 @@ JavaScript는 자동 메모리 관리 덕분에 생산성을 높이기 위한 �
 
 ### 출처
 
-- [V8 엔진 Orinoco Project](https://v8.dev/blog/trash-talk)
+- [V8 Engine Orinoco Project](https://v8.dev/blog/trash-talk)
 - [MDN JavaScript의 메모리 관리](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_management)
 - [Concurrent UI Pattern을 도입하는 방법 (카카오페이 블로그)](https://fe-developers.kakaoent.com/2022/220519-garbage-collection/)
 
