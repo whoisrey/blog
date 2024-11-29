@@ -118,6 +118,7 @@
       theme("colors.text.link"),
       theme("colors.text.link")
     );
+    background: none;
   }
 
   a:not(.unset):hover {

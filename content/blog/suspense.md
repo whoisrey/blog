@@ -35,7 +35,7 @@ React 18에서는 이러한 문제를 해결하기 위해 **Concurrent Rendering
 
 아래는 React 18 이전과 이후의 렌더링 방식 차이를 도식화한 그림입니다.
 
-![rendering](/images/rendering.png)
+![rendering](/images/suspense/rendering.png)
 
 React 18의 **Concurrent Rendering**을 통해, 가상 DOM 계산 과정에서 추가 변경이 발생하더라도 작업을 중단하고 재개할 수 있어 지연 문제가 크게 개선되었습니다.
 
@@ -47,21 +47,25 @@ React 18의 **Concurrent Rendering**을 통해, 가상 DOM 계산 과정에서 �
 
 - Suspense를 적용하지 않은 페이지
 
-![html](/images/html.png)
+![html](/images/suspense/html.png)
 
 이 페이지는 HTML을 생성하기 위해 서버에서 모든 데이터를 받아와야 합니다. 이러한 과정의 경우, 특정 컴포넌트에서 데이터를 받아오는 속도가 느리다면 모든 데이터를 불러와야 렌더링이 진행되는 SSR의 특성 상 전체 렌더링 속도가 저하될 수 있다는 단점이 있습니다.
 
 - Suspense를 적용한 페이지
 
-![suspense](/images/suspense.png)
+![suspense](/images/suspense/suspense.png)
 
 Suspense로 감싸는 경우, 해당 컴포넌트 때문에 나머지 컴포넌트들이 기다릴 필요가 없음을 알려줍니다. React는 이를 기반으로 나머지 부분에 대한 작업을 진행하고, 데이터를 받아오는 컴포넌트의 렌더링 과정을 **중단**한 채 fallback으로 제공된 스피너를 보여줍니다. 그리고 데이터 로딩이 완료되면 렌더링 과정을 **재개**하여 해당 컴포넌트를 완전히 렌더링합니다. 이러한 방식으로 **Suspense**는 각 컴포넌트가 독립적으로 데이터를 로드하고 **동시에** 렌더링할 수 있는 유연성을 제공하면서 SSR 방식으로 페이지를 불러오더라도 전체 페이지에 대한 로딩 지연을 해결할 수 있습니다.
 
 ---
 
-이처럼 React 18에서 **Suspense**는 SSR 과정의 효율성을 높이고 사용자 경험 향상을 위한 핵심 요소로 자리매김하게 되었습니다. 우리의 코드도 Suspense라는 꽃을 잘 활용하여 한층 더 아름답게 구현해보면 어떨까요?
+이처럼 React 18에서 **Suspense**는 SSR 과정의 효율성을 높이는 핵심 요소로 자리매김하게 되었습니다. 우리도 **Suspense라는 꽃을 잘 활용하여 사용자 경험을 향상시킬 수 있는 코드를 작성하면 어떨까요?**
 
 ### 출처
 
 - [New Suspense SSR Architecture in React 18 (Dan Abramov)](https://github.com/reactwg/react-18/discussions/37)
 - [Concurrent UI Pattern을 도입하는 방법 (카카오페이 블로그)](https://tech.kakaopay.com/post/react-query-2/)
+
+---
+
+학습 중인 내용을 정리하는 초보 개발자입니다. 잘못된 내용이 있다면 피드백 부탁드립니다.
