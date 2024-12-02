@@ -2,7 +2,7 @@
 external: false
 title: React 18의 꽃, Suspense
 description: React 18에서 중요해진 Suspense에 대해 설명합니다.
-date: 2024-11-23
+date: 2024-11-30
 ---
 
 꽃은 "영화의 꽃은 감독"이라는 말처럼 중요한 대상을 비유할 때 쓰이기도 합니다. 그 중 **Suspense**는 React 18에서 중요한 대상으로 부각되고 있습니다. Suspense는 단어 "_Suspend_: 지연시키다." 에서 유래한 이름으로, 하위 컴포넌트가 로드되기 전까지 지연되는 상황에서 대체 UI를 표시하는 기능을 제공하는 React 컴포넌트입니다. 그렇다면 Suspense는 단순히 대체 UI를 보여주는 기능만을 위한 것일까요? 저는 React 팀이 18 버전에서 Suspense를 중요한 대상으로 보여주는 또 다른 이유가 있을거라 생각합니다.
