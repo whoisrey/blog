@@ -34,7 +34,7 @@ const sortedProjects = projects
   <p>최신 블로그 :</p>
   <ul>
     {
-      sortedPosts.slice(0, 2).map((post) => {
+      sortedPosts.slice(0, 5).map((post) => {
         const formattedDate = new Date(
           post.frontmatter.date
         ).toLocaleDateString("en-us", {
