@@ -3,7 +3,7 @@ import { blog } from "../lib/markdoc/frontmatter.schema";
 import { readAll } from "../lib/markdoc/read";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "../config";
 
-export const get = async () => {
+export const GET = async () => {
   const posts = await readAll({
     directory: "blog",
     frontmatterSchema: blog,
@@ -18,40 +18,35 @@ export const get = async () => {
     );
 
   let baseUrl = SITE_URL;
-  // removing trailing slash if found
-  // https://example.com/ => https://example.com
   baseUrl = baseUrl.replace(/\/+$/g, "");
 
   const rssItems = sortedPosts.map(({ frontmatter, slug }) => {
     if (frontmatter.external) {
-      const title = frontmatter.title;
-      const pubDate = frontmatter.date;
-      const link = frontmatter.url;
-
       return {
-        title,
-        pubDate,
-        link,
+        title: frontmatter.title,
+        pubDate: frontmatter.date,
+        link: frontmatter.url,
       };
     }
 
-    const title = frontmatter.title;
-    const pubDate = frontmatter.date;
-    const description = frontmatter.description;
-    const link = `${baseUrl}/blog/${slug}`;
-
     return {
-      title,
-      pubDate,
-      description,
-      link,
+      title: frontmatter.title,
+      pubDate: frontmatter.date,
+      description: frontmatter.description,
+      link: `${baseUrl}/blog/${slug}`,
     };
   });
 
-  return rss({
+  const feed = await rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: baseUrl,
     items: rssItems,
+  });
+
+  return new Response(feed.body, {
+    headers: {
+      "Content-Type": "application/xml; charset=utf-8",
+    },
   });
 };
