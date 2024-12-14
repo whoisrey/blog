@@ -146,8 +146,8 @@ CSSOM은 DOM과 결합되어 렌더링을 위한 **렌더 트리(Render Tree)** 
 
 ### 출처
 
-- [MDN How Browsers Work?](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work#overview)
-- [BrowserStack What is a Browser?](https://www.browserstack.com/guide/what-is-browser)
+- [[MDN] How Browsers Work?](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work#overview)
+- [[BrowserStack] What is a Browser?](https://www.browserstack.com/guide/what-is-browser)
 
 ---
 

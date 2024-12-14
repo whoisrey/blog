@@ -63,8 +63,8 @@ Suspense로 감싸는 경우, 해당 컴포넌트 때문에 나머지 컴포넌�
 
 ### 출처
 
-- [New Suspense SSR Architecture in React 18 (Dan Abramov)](https://github.com/reactwg/react-18/discussions/37)
-- [Concurrent UI Pattern을 도입하는 방법 (카카오페이 블로그)](https://tech.kakaopay.com/post/react-query-2/)
+- [[Dan Abramov] New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37)
+- [[카카오페이 블로그] Concurrent UI Pattern을 도입하는 방법](https://tech.kakaopay.com/post/react-query-2/)
 
 ---
 

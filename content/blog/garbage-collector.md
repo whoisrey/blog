@@ -102,9 +102,8 @@ JavaScript는 브라우저 내 엔진의 **가비지 컬렉션**을 통해 오�
 
 ### 출처
 
-- [V8 Engine Orinoco Project](https://v8.dev/blog/trash-talk)
-- [MDN JavaScript의 메모리 관리](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_management)
-- [Concurrent UI Pattern을 도입하는 방법 (카카오페이 블로그)](https://fe-developers.kakaoent.com/2022/220519-garbage-collection/)
+- [[V8 Engine] Orinoco Project](https://v8.dev/blog/trash-talk)
+- [[MDN] JavaScript의 메모리 관리](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_management)
 
 ---
 
