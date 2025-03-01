@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Roboto Mono", "sans-serif"],
-        heading: ["Roboto Mono", "sans-serif"],
+        body: ["Money Graphy", "sans-serif"],
+        heading: ["Money Graphy", "sans-serif"],
       },
       colors: {
         transparent: "transparent",

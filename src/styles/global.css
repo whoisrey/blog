@@ -19,11 +19,11 @@
     /* Tailwind slate-900 #0f172a */
     --color-text-heading: 15 23 42;
     /* Tailwind slate-900 #0f172a */
-    --color-text-bold: 15 23 42;
+    --color-text-bold: 255 100 9;
     /* Tailwind slate-900 #0f172a */
     --color-text-muted: 100 116 139;
     /* black */
-    --color-text-link: 0 0 0;
+    --color-text-link: 255 100 9;
     /* black */
     --color-text-code: 0 0 0;
     /* black */
@@ -50,7 +50,7 @@
     /* white */
     --color-text-heading: 255 255 255;
     /* white */
-    --color-text-bold: 255 255 255;
+    --color-text-bold: 113 123 247;
     /* Tailwind neutral-300 #d4d4d4 */
     --color-text-muted: 212 212 212;
     /* #717bf7 */
@@ -211,5 +211,16 @@
     transform: translateZ(0) scale(1);
   }
 
+  img[src*="#dark"] {
+    display: none;
+  }
+
+  .dark img[src*="#light"] {
+    display: none;
+  }
+
+  .dark img[src*="#dark"] {
+    display: block;
+  }
   /* ------ REUSABLE UTILS - END ------ */
 }
